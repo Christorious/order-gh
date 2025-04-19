@@ -1,0 +1,31 @@
+
+---
+
+### `hardware-list.md`
+
+```markdown
+# Drone Hardware Suggestion List (Open-Source Compatible)
+
+### Core Components
+
+| Part | Description |
+|------|-------------|
+| Pixhawk 4 | Open-source drone flight controller |
+| GPS Module | Location tracking |
+| 4G LTE Modem | Connect to internet API |
+| Raspberry Pi 4 | Main computer for API logic |
+| LiPo Battery | Power source |
+| Brushless Motors + ESC | For flight control |
+| Frame Kit | Lightweight drone frame |
+
+### Optional
+
+- Onboard camera (for vision-based verification)
+- Parachute recovery system
+- Buzzer/beacon
+
+### Software
+
+- PX4 Firmware or ArduPilot
+- MAVLink for telemetry
+- Python or Node.js to connect to Order.GH API
