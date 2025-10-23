@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "An open-source delivery coordination engine for Ghana and beyond. # Order.GH 🚚🇬🇭 – An Open Source Delivery Coordination Engine for Africa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christorious/order-gh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Christorious/order-gh/issues"
+  },
+  "homepage": "https://github.com/Christorious/order-gh#readme"
+}
