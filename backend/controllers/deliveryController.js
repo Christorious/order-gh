@@ -12,12 +12,15 @@ const createDeliveryRequest = (req, res) => {
     itemDimensions,
     deliverySpeed,
     recipientIdentifier,
+    signature,
+    signerAddress,
   } = req.body;
 
-  if (!pickupLocation || !dropoffLocation || !itemDescription) {
-    return res.status(400).json({ message: 'Missing required fields' });
+  if (!pickupLocation || !dropoffLocation || !itemDescription || !signature || !signerAddress) {
+    return res.status(400).json({ message: 'Missing required fields, including signature and signerAddress' });
   }
 
+  // The signature has been verified by the middleware.
   const newRequest = new DeliveryRequest(
     pickupLocation,
     dropoffLocation,
@@ -25,7 +28,8 @@ const createDeliveryRequest = (req, res) => {
     itemWeight,
     itemDimensions,
     deliverySpeed,
-    recipientIdentifier
+    recipientIdentifier,
+    req.verifiedSignerAddress // Pass the verified address to the model
   );
 
   deliveryRequests.push(newRequest);

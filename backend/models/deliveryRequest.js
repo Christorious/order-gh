@@ -1,6 +1,7 @@
 class DeliveryRequest {
-  constructor(pickupLocation, dropoffLocation, itemDescription, itemWeight, itemDimensions, deliverySpeed, recipientIdentifier) {
+  constructor(pickupLocation, dropoffLocation, itemDescription, itemWeight, itemDimensions, deliverySpeed, recipientIdentifier, signerAddress) {
     this.id = Date.now().toString();
+    this.signerAddress = signerAddress;
     this.pickupLocation = pickupLocation;
     this.dropoffLocation = dropoffLocation;
     this.itemDescription = itemDescription;
